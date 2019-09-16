@@ -1,0 +1,38 @@
+Arrrgh - it be the New Relic Treasure Hunt!
+
+
+
+The Bug Hunt
+After a long voyage at sea - you’re settling down for a tot of rum and hard-tack, only to be interrupted by a text indicating your critical pirate WebPortal is having an issue. What do you do next? For most folks without an APM solution, the story is archaic: log into machines, sift through large log files, and inevitably guess at what is occurring. New Relic makes this story a non-issue by allowing you to quickly hone in on the specific cause of any issue quickly and within context.
+
+Which transaction is suffering?  [/browse/plans.jsp | /browse/phone.jsp | /browse/phones.jsp | /index.jsp | /browse/plan.jsp]
+Looking within a transaction trace - can you identify which segment is causing the issue?
+What caused the issue?  [ gparker deployed revision Optimizing Database Query ]
+How did the issue get resolved [gparker deployed revision Rolling Back Query Changes]
+
+
+
+Special Delivery
+After getting marooned on a desert island for days - and running out of supplies - your pirate friends place an emergency online delivery on your platform for a new barbeque.  The trouble really starts when they start fighting each other because the online shopping experience is terrible on their pillaged smartphones.  What’s going wrong with the user experience in the WebPortal?
+
+What’s the most common cause of error?  [Error: Times out loading source ./js/couponSpecial.js]
+What part of the world is suffering the most with performance?
+
+
+Getting ahead of the curve
+A good pirate is always planning ahead - and how better to do that than with Synthetics checks?  A synthetic check is emulating real user activity on your webpage or API - and reporting the results.  In this treasure hunt - we want you to find the slowest of the APIs - and then to use Insights to create a dashboard showing where the API performance can be improved.
+
+In Synthetics - find one of the slowest API invocations and highlight where the performance problem is.  
+Using the SyntheticRequest namespace in Insights - answer the following questions
+What’s the 95th percentile of duration for the http://coretron.telco.nrdemo-partner.com:80 API?	[870ms]
+Using the FACET qualifier - what is the URL with the highest average duration?  [http://webportal.telco.nrdemo-partner.com/browse/phones/67424431]
+
+
+
+Tying everything together
+Understanding metrics and events is important - but when you’re planning any sort of refactoring or re-architecting to more ephemeral architectures - understanding the dependencies and relationships is even more fundamental.  Fortunately - New Relic One takes a fresh view.  As the industry’s first entity-centric observability platform - we can easily find a way of navigating through the relationships - whether infrastructure, application, external service - or anything else.
+
+Looking at the Inventory Service.  How many hosts does this service depend on?
+What type of database is being used?
+What tables are being used by the service?
+
