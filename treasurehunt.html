@@ -1,9 +1,431 @@
-Arrrgh - it be the New Relic Treasure Hunt!
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+  <title>Arrrgh - it be the New Relic Treasure Hunt!</title>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">  
+  
+  <!-- Theme CSS -->
+  <link id="theme-style" rel="stylesheet" href="https://newrelic.github.io/demotron_public/assets/css/styles.css">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
+  <script src="./form-grade.js"></script>
 
+</head> 
+
+<body class="body-pink">
+  <div class="page-wrapper">
+    <!-- ******Header****** -->
+    <header id="header" class="header">
+      <div class="container">
+        <div class="branding">
+          <h1 class="logo">
+            <a href="index.html">
+              <span aria-hidden="true" class="icon_documents_alt icon"></span>
+              <span class="text-highlight">Demotron</span><span class="text-bold">Docs</span>
+            </a>
+          </h1>
+        </div><!--//branding-->
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li class="active">Demo Scripts</li>
+        </ol>
+      </div><!--//container-->
+    </header><!--//header-->
+    <div class="doc-wrapper">
+      <div class="container">
+        <div id="doc-header" class="doc-header text-center">
+          <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i>New Relic - Demotron Treasure Hunt</h1>
+          <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Sept 15th, 2019</div>
+        </div><!--//doc-header-->
+        <div class="doc-body">
+          <div class="doc-content">
+            <div class="content-inner">
+              <section id="tableofcontents-section" class="doc-section">
+                <h2 class="section-title">Table of Contents</h2>
+                <div class="section-block">
+                  <p>The New Relic Treasure Hunt is a fun way of experiencing the New Relic platform - in the context of a demo environment where some known issues are happening.  As a practitioner in the world of modern Digital development and operation, you will face many of these challenges in your own world.  The Treasure Hunt will guide you through several scenarios where observability and insight may lead you to better outcomes.  Happy hunting!</p>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Title</th>
+                          <th>Description</th>
+                          <th>Products</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a class="scrollto" href="#bughunt">The Bug Hunt</a></td>
+                          <td>How New Relic can be used to quickly and efficiently find code defects</td>
+                          <td><img height="30px" src="https://newrelic.github.io/demotron_public/images/APMLogo.png" /></td>
+                        </tr>
+                        <tr>
+                          <td><a class="scrollto" href="#specialdelivery">Special Delivery</a></td>
+                          <td>Taking an outside-in perspective on Customer Experience</td>
+                          <td><img height="30px" src="https://newrelic.github.io/demotron_public/images/BrowserLogo.png" /></td>
+                        </tr>
+                        <tr>
+                          <td><a class="scrollto" href="#aheadofcurve">Getting ahead of the curve</a></td>
+                          <td>Getting proactive, and using insights to figure out where to focus</td>
+                          <td><img height="30px" src="images/BrowserLogo.png" /> <img height="30px" src="images/InfrastructureLogo.png" /></td>
+                        </tr>
+                        <tr>
+                          <td><a class="scrollto" href="#relationships">Tying everything together</a></td>
+                          <td>Moving beyond the data - looking at entity relationships</td>
+                          <td><img height="30px" src="https://newrelic.github.io/demotron_public/images/SyntheticsLogo.png" /></td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div><!--//table-responsive-->
+                </div>
+              </section><!--//doc-section-->
+              <section id="2ampage-section" class="doc-section">
+                <h2 class="section-title">The 2am Page <img height="30px" src="images/APMLogo.png" /></h2>
+                <div class="section-block">
+                  <h3 class="block-title">The Scenario</h3>
+                  <p>After a long voyage at sea - you’re settling down for a tot of rum and hard-tack, only to be interrupted by a text indicating your critical pirate WebPortal is having an issue. What do you do next? For most folks without an APM solution, the story is archaic: log into machines, sift through large log files, and inevitably guess at what is occurring. New Relic makes this story a non-issue by allowing you to quickly hone in on the specific cause of any issue quickly and within context.</p>
+                </div>
+                <div class="section-block">
+                  <h3 class="block-title">Treasure Hunt Challenges</h3>
+                  <div class="panel-group" id="accordion">
+                  <form id="bughuntform">
+                    Which transaction is suffering?  
+                    <select id="bughunt1"><option>/browse/plans.jsp</option><option>/browse/phone.jsp</option><option>/browse/phones.jsp</option><option>/index.jsp</option><option>/browse/plan.jsp</option>
+                    </select>                    
+                  </form>
+                  </div>  <!--// Walkthrough -->
+                </div>
+              </section><!--//doc-section-->
+              <section id="needle-section" class="doc-section">
+                <h2 class="section-title">The Needle in the Haystack <img height="30px" src="images/APMLogo.png" /></h2>
+                <div class="section-block">
+                  <h3 class="block-title">Main Narrative</h3>
+                  <p>Applications are fundamentally different then they were ten years ago (even five years ago).  You are no longer dealing with a single, complex application on a handful of hosts, but are generally facing a series of light-weight applications spread across many hosts.  This means that debugging is often a cross-application exercise.  The following demo will show how bad code deployed to a backend service can impact user-experience and will show how easy it is to notice and understand with New Relic APM.</p>
+                </div>
+                <div class="section-block">
+                  <h3 class="block-title">Core Features/Callouts</h3>
+                  <p>Service Maps, Micro-Service Architectures, Transaction details, Database queries, Deploy Markers, and External Services</p>
+                </div>
+                <div class="section-block">
+                  <h3 class="block-title">Demo Walkthrough</h3>
+                  <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#needle-collapse1">Step 1 - Navigate to the Webportal's APM Overview and set the view to a 24 hour time window</a>
+                        </h4>
+                      </div> 
+                      <div id="needle-collapse1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>We are starting with the WebPortal because it's the service hosting the web frontend, so the main entrypoint.  Setting the TimePicker to a 24-hour window will show a clear spike that occurs every day around 11am.</p>
+                          <h5>Screenshots:</h5>
+                          <div class="row">
+                            <a href="images/screenshots/NRWebPortalOverview2.png" data-toggle="lightbox" data-title="ACME Telco Homepage">
+                              <img src="images/screenshots/NRWebPortalOverview2.png" height="180px" class="img-fluid" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!--// Step 1 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#needle-collapse2">Step 2 - Notice the spike in response time around 11am due to an external service</a>
+                        </h4>
+                      </div>
+                      <div id="needle-collapse2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>You now have items in your shopping cart and you're cash-in-hand about to checkout.  Clicking on the shopping cart (or Login link) at the top of the page will redirect you to a login form.  Entering a username that contains an invalid character will generate an exception that prevents you from logging in successfully (e.g. bad+username@gmail.com).  The point is that this is what an exception looks like to a customer.  Someone who wanted to give money for your product was unable to accomplish that and is likely frustrated.
+                          </p>
+                          <h5>Screenshots:</h5>
+                          <div class="row">
+                            <a href="images/screenshots/NRWebPortalOverview3.png" data-toggle="lightbox" data-title="ACME Telco Homepage">
+                              <img src="images/screenshots/NRWebPortalOverview3.png" height="200px" class="img-fluid" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!--// Step 2 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#needle-collapse3">Step 3 - Using the Transaction tab identify it is the Plan Service</a>
+                        </h4>
+                      </div>
+                      <div id="needle-collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>This is a critical step.  Now that we know there is a spike in response time due to an external service, the imperative question is which one?  Navigating to the Transactions tab we can clearly see that the Places service is the one causing all the issues, so that's where we need to traverse next to get more detail.
+                          </p>
+                          <h5>Screenshots:</h5>
+                          <div class="row">
+                            <a href="images/screenshots/NRWebPortalTransaction.png" data-toggle="lightbox" data-title="ACME Telco Homepage">
+                              <img src="images/screenshots/NRWebPortalTransaction.png" height="190px" class="img-fluid" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!--// Step 3 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#needle-collapse4">Step 4 - View the deploy markers on the Plan Service around the outage</a>
+                        </h4>
+                      </div>
+                      <div id="needle-collapse4" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>There is a very clear story of what is happening on the Plan service.  A deployment marker goes out that indicates a developer is trying to optimize database queries and immediately after a spike in the response time can be seen.  Someone has released bad code.  About ten minutes later a second deployment marker goes out that is meant to be a hotfix (a live fix in production) to patch that issue, and while it does appear the response time improved, it still is much worse than before.  Finally a last deployment marker goes out that shows them rolling everything back.  This gives a clear depiction to 'what' happened, but its still important to know 'how' it happened at a technical level.
+                          </p>
+                          <h5>Screenshots:</h5>
+                          <div class="row">
+                            <a href="images/screenshots/NRPlansOverview.png" data-toggle="lightbox" data-title="ACME Telco Homepage">
+                              <img src="images/screenshots/NRPlansOverview.png" height="200px" class="img-fluid" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>  <!--// Step 4 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#needle-collapse5">Step 5 - Go to the slow performaning transaction and point out the imperformant DB queries</a>
+                        </h4>
+                      </div>
+                      <div id="needle-collapse5" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>Clicking into the Transaction view, we can see the 'GetPlans' API is experiencing the slowdowns.  Drilling in further we can see that a call to the database seems to be issued hundreds of times for each time the API is called.  This is a common technical problem known as an "N+1".  Think about going to the grocery story, buying one item, driving home, putting it away and then driving back to the grocery story to grab another item as opposed to just grabbing everything at once.  Clicking into the Database tab under the transaction you can show the customer the exact query that was issued against the database which includes an 'id = ?' field that indicates that they are requesting items one at a time by their ID.  You can also show that the two deploys have two different behaviors.  The first is the N+1 that we just discussed, but the second solves the N+1 and instead introduces a slow stored procedure.
+                          </p>
+                          <h5>Screenshots:</h5>
+                          <div class="row">
+                            <a href="images/screenshots/NRPlansTransaction.png" data-toggle="lightbox" data-title="ACME Telco Homepage">
+                              <img src="images/screenshots/NRPlansTransaction.png" height="200px" class="img-fluid" />
+                            </a>
+                            <a href="images/screenshots/NRPlansTransactionDB.png" data-toggle="lightbox" data-title="ACME Telco Homepage">
+                              <img src="images/screenshots/NRPlansTransactionDB.png" height="200px" class="img-fluid" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!--// Step 5 -->
+                  </div>  <!--// Walkthrough -->
+              </section><!--//doc-section-->
+              <section id="amazonpackage-section" class="doc-section">
+                <h2 class="section-title">The Amazon Package <img height="30px" src="images/BrowserLogo.png" /> <img height="30px" src="images/InfrastructureLogo.png" /></h2>
+                <div class="section-block">
+                  <h3 class="block-title">Main Narrative</h3>
+                  <p>If you order a item from Amazon and it arrives at your house broken or late; do you really care why?  If it was the fault of the manufacturer, the distributor or the delivery person it is equally as annoying.  The same logic applies to a website.  If a customer navigates to a page and it doesn't work or takes too long, they are not interested in the technical reasons why.  Despite this fact, many customers only monitor their backend services and ignore other the other critical tiers (frontend and infrastructure) despite those areas being just as prone to degrade user experience.  The following demo will emphasize the importance of Browser and Infrastructure in avoiding blindspots in your monitoring story.</p>
+                </div>
+                <div class="section-block">
+                  <h3 class="block-title">Core Features/Callouts</h3>
+                  <p>JS Errors, Browser response time, Infrastructure KPIs</p>
+                </div>
+                <div class="section-block">
+                  <h3 class="block-title">Demo Walkthrough</h3>
+                  <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#amazonpackage-collapse1">Step 1 - Navigate to the WebPortal's Browser Overview in New Relic</a>
+                        </h4>
+                      </div> 
+                      <div id="amazonpackage-collapse1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>More details coming soon!</p>
+                          <h5>Screenshots:</h5>
+                          <div class="row">
+                
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!--// Step 1 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#amazonpackage-collapse2">Step 2 - Point out backend response time being relatively minor compared to overall performance
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="amazonpackage-collapse2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>More details coming soon!</p>
+                          <h5>Screenshots:</h5>
+                          <div class="row">
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!--// Step 2 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#amazonpackage-collapse3">Step 3 - Show JS Errors to sell that errors can occur anywhere
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="amazonpackage-collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>More details coming soon!
+                          </p>
+                          <h5>Screenshots:</h5>
+                          <div class="row">
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!--// Step 3 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#amazonpackage-collapse4">Step 4 - Navigate to Infrastructure and talk about infra failures</a>
+                        </h4>
+                      </div>
+                      <div id="amazonpackage-collapse4" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>More details coming soon!
+                          </p>
+                          <h5>Screenshots:</h5>
+                          <div class="row">
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>  <!--// Step 4 -->
+                  </div>  <!--// Walkthrough -->
+              </section><!--//doc-section-->
+              <section id="replacingtwitter-section" class="doc-section">
+                <h2 class="section-title">Replacing Twitter for your Alerts <img height="30px" src="images/SyntheticsLogo.png" /> <img height="30px" src="images/AlertsLogo.png" /></h2>
+                <div class="section-block">
+                  <h3 class="block-title">Main Narrative</h3>
+                  <p>The previous demos have focused on knowing when something has gone wrong, but that means that it has already gone wrong and your customers are feeling the pain; that is, it is retroactive monitoring.  Wouldn't it be better if you knew about your issues before or immediately after customers were impacted by them?  The following demo shows how you can use New Relic Synthetics to proactively monitor your systems with a 'canary' approach as well as how New Relic Alerts can be used to ensure you're notified as soon as things go awry.</p>
+                </div>
+                <div class="section-block">
+                  <h3 class="block-title">Core Features/Callouts</h3>
+                  <p>New Relic Synthetics, New Relic Alerts</p>
+                </div>
+                <div class="section-block">
+                  <h3 class="block-title">Demo Walkthrough</h3>
+                  <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#replacingtwitter-collapse1">Step 1 - Discuss "Twitter-based alerting" and why reactive is bad</a>
+                        </h4>
+                      </div> 
+                      <div id="replacingtwitter-collapse1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>More details coming soon!</p>
+                          <h5>Screenshots:</h5>
+                          <div class="row">
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!--// Step 1 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#replacingtwitter-collapse2">Step 2 - Navigate to New Relic Synthetics</a>
+                        </h4>
+                      </div>
+                      <div id="replacingtwitter-collapse2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>More details coming soon!
+                          </p>
+                          <h5>Screenshots:</h5>
+                          <div class="row">
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!--// Step 2 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#replacingtwitter-collapse3">Step 3 - Click into Scripted Browser monitor and walk through script</a>
+                        </h4>
+                      </div>
+                      <div id="replacingtwitter-collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>More details coming soon!
+                          </p>
+                          <h5>Screenshots:</h5>
+                          <div class="row">
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!--// Step 3 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#replacingtwitter-collapse4">Step 4 - Navigate to Alerts and emphasize the many triggers and channels</a>
+                        </h4>
+                      </div>
+                      <div id="replacingtwitter-collapse4" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>
+                            More details coming soon!
+                          </p>
+                          <h5>Screenshots:</h5>
+                          <div class="row">
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>  <!--// Step 4 -->
+                  </div>  <!--// Walkthrough -->
+              </section><!--//doc-section-->
+            </div><!--//content-inner-->
+          </div><!--//doc-content-->
+          <div class="doc-sidebar hidden-xs">
+            <nav id="doc-nav">
+              <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
+                <li><a class="scrollto" href="#tableofcontents-section">Table of Contents</a></li>
+                <li><a class="scrollto" href="#bughunt">The Bug Hunt</a></li>
+                <li><a class="scrollto" href="#specialdelivery">Special Delivery</a></li>
+                <li><a class="scrollto" href="#aheadofcurve">Getting ahead of the Curve</a></li>
+                <li><a class="scrollto" href="#relationships">Tying Everything Together</a></li>
+              </ul><!--//doc-menu-->
+            </nav>
+          </div><!--//doc-sidebar-->
+        </div><!--//doc-body-->        
+      </div><!--//container-->
+    </div><!--//doc-wrapper-->
+  </div><!--//page-wrapper-->
+  
+  <footer id="footer" class="footer text-center">
+    <div class="container">
+      <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+      <small class="copyright">Core design by <a href="http://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a></small>
+      
+    </div><!--//container-->
+  </footer><!--//footer-->
+  
+   
+  <!-- Main Javascript -->      
+  <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>  
+  <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>                                
+  <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+  <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+  
+</body>
+</html> 
 
 The Bug Hunt
-After a long voyage at sea - you’re settling down for a tot of rum and hard-tack, only to be interrupted by a text indicating your critical pirate WebPortal is having an issue. What do you do next? For most folks without an APM solution, the story is archaic: log into machines, sift through large log files, and inevitably guess at what is occurring. New Relic makes this story a non-issue by allowing you to quickly hone in on the specific cause of any issue quickly and within context.
 
 Which transaction is suffering?  [/browse/plans.jsp | /browse/phone.jsp | /browse/phones.jsp | /index.jsp | /browse/plan.jsp]
 Looking within a transaction trace - can you identify which segment is causing the issue?
