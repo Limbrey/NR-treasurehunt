@@ -1,0 +1,41 @@
+input{
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+input[type=select] {
+    display: block;
+}
+
+input[type=checkbox] {
+    display: float;
+    clear: right;
+    white-space: space pre;
+}
+
+select {
+    margin-left: 40px;
+    display: block;
+}
+
+input[type=textbox] {
+    display: float;
+    clear: left;
+}
+
+.graded {
+    margin-top: 10px;
+}
+
+.score-left{
+    float:left;
+    position: fixed;
+    border: 2px solid #EA5395;
+    height: 250px;
+    width: 180px;
+    padding: 5px;
+}
+
+#curve1 {
+    width: 80%;
+}
